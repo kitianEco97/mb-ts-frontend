@@ -1,0 +1,15 @@
+<app-header class="mb-5"></app-header>
+
+<div class="container mt-5 text-center">
+    <div class="jumbotron">
+        <h1 *ngIf="!nombreUsuario" class="display-4">Bienvenido</h1>
+        <h1 *ngIf="nombreUsuario" class="display-4">Bienvenido: {{nombreUsuario}}</h1>
+        <p class="lead">Esta es la intranet del laboratorio de pruebas de Master Builders.</p>
+        <hr class="my-4">
+        <p>Para acceder como un usuario normal(solo para leer datos) deberas registrarte en el formulario y luego iniciar sesión con tu nombre de usuario y tu contraseña.</p>
+        <p>Si quieres acceder como administrador para realizar cambios dentro del sistema, deberas contactarte con la administración.</p>
+        <p class="lead">
+          <a class="btn btn-primary btn-lg" href="#" role="button">Accede</a>
+        </p>
+      </div>
+</div>

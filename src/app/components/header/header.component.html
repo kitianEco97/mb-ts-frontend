@@ -1,0 +1,30 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" [routerLink]="['/']" routerLinkActive="router-link-active">
+        <img src="../../../assets/img/mbs-logo.svg" alt="" width="80" height="80">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mr-auto text-center">
+
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/']" routerLinkActive="router-link-active"><i class="bi bi-house-door-fill mx-1"></i> Inicio</a>
+          </li>   
+          <li class="nav-item" *ngIf="isLogged">
+            <a class="nav-link" [routerLink]="['/lista']" routerLinkActive="router-link-active"><i class="bi bi-list-task mx-1"></i>Lista</a>
+          </li> 
+          <li class="nav-item" *ngIf="isAdmin">
+            <a class="nav-link" [routerLink]="['/create']" routerLinkActive="router-link-active"><i class="bi bi-plus-circle mx-1"></i>Nuevo</a>
+          </li>          
+          
+        </ul>
+        <form class="ml-auto text-center">
+          <button class="btn btn-outline-success" *ngIf="!isLogged" [routerLink]="['/login']" routerLinkActive="router-link-active"><i class="bi bi-box-arrow-in-right mx-1"></i> Iniciar sesión</button>
+          <button class="btn btn-outline-danger" *ngIf="isLogged" (click)="onLogout()" type="reset"><i class="bi bi-door-closed mx-1"></i> Cerrar sesión</button>
+        </form>
+        
+      </div>
+    </div>
+  </nav>

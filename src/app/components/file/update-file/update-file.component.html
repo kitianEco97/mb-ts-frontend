@@ -1,0 +1,109 @@
+<app-header></app-header>
+<div class="container mt-5">
+
+    <div *ngIf="loading" class="mx-auto text-center">
+        <img src="../../../../assets/gif/load.gif" alt="gif de carga" width="200">
+    </div>
+      
+    
+    <div *ngIf="!loading">
+        <div class="container mt-3" *ngIf="file">
+            <div class="row">
+                <div class="col-md-12 mx-auto mb-5">
+        
+                    <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+                        <div class="row">
+                            <div class="form-group col-md-4 col-xs-12">
+                                <label for="proyecto">Proyecto:</label>
+                                <input type="text" class="form-control" id="proyecto" name="proyecto"
+                                [(ngModel)]="file.proyecto" required>
+                            </div>                
+                            <div class="form-group col-md-4 col-xs-12">
+                                <label for="cliente">Cliente:</label>
+                                <input type="text" class="form-control" id="cliente" name="cliente"
+                                [(ngModel)]="file.cliente" required>
+                            </div>
+                            <div class="form-group col-md-4 col-xs-12">
+                                <label for="tipohormigon">Tipo de hormigón:</label>
+                                <input type="text" class="form-control" id="tipohormigon" name="tipohormigon"
+                                [(ngModel)]="file.tipohormigon" required>
+                            </div>
+                        </div>
+        
+                        <div class="row">
+                            <div class="form-group col-md-4 col-xs-12">
+                                <label for="numeromuestra">Proyecto:</label>
+                                <input type="text" class="form-control" id="numeromuestra" name="numeromuestra"
+                                [(ngModel)]="file.numeromuestra" required>
+                            </div>                
+                            <div class="form-group col-md-4 col-xs-12">
+                                <label for="volumen">Volumen:</label>
+                                <input type="text" class="form-control" id="volumen" name="volumen"
+                                [(ngModel)]="file.volumen" required>
+                            </div>
+                            <div class="form-group col-md-4 col-xs-12">
+                                <label for="nhp">N° Hormigón de prueba:</label>
+                                <input type="text" class="form-control" id="nhp" name="nhp"
+                                [(ngModel)]="file.nhp" required>
+                            </div>
+                        </div>   
+                        
+                        <div class="row">
+                            <div class="form-group col-md-4 col-xs-12">
+                                <label for="marca">Marca:</label>
+                                <input type="text" class="form-control" id="marca" name="marca"
+                                [(ngModel)]="file.marca" required>
+                            </div>                
+                            <div class="form-group col-md-4 col-xs-12">
+                                <label for="abs">Abs:</label>
+                                <input type="number" class="form-control" id="abs" name="abs"
+                                [(ngModel)]="file.abs" required>
+                            </div>
+                            <div class="form-group col-md-4 col-xs-12">
+                                <label for="lote">Lote:</label>
+                                <input type="number" class="form-control" id="lote" name="lote"
+                                [(ngModel)]="file.lote" required>
+                            </div>
+                        </div>  
+                        
+                        <div class="row">
+                            <div class="form-group col-md-4 col-xs-12">
+                                <label for="pesoseco">Pesoseco:</label>
+                                <input type="number" class="form-control" id="pesoseco" name="pesoseco"
+                                [(ngModel)]="file.pesoseco" required>
+                            </div>                
+                            <div class="form-group col-md-4 col-xs-12">
+                                <label for="pesosecobatch">Pesosecobatch:</label>
+                                <input type="number" class="form-control" id="pesosecobatch" name="pesosecobatch"
+                                [(ngModel)]="file.pesosecobatch" required>
+                            </div>
+                            <div class="form-group col-md-4 col-xs-12">
+                                <label for="humedad">humedad:</label>
+                                <input type="number" class="form-control" id="humedad" name="humedad"
+                                [(ngModel)]="file.humedad" required>
+                            </div>
+                        </div>  
+
+                        <div class="row">
+                            <div class="form-group col-md-4 col-xs-12">
+                                <label for="agua">Agua:</label>
+                                <input type="number" class="form-control" id="agua" name="agua"
+                                [(ngModel)]="file.agua" required>
+                            </div>                
+                            <div class="form-group col-md-4 col-xs-12">
+                                <label for="pesohumedo">Pesohumedo:</label>
+                                <input type="number" class="form-control" id="pesohumedo" name="pesohumedo"
+                                [(ngModel)]="file.pesohumedo" required>
+                            </div>                            
+                        </div>  
+
+        
+                        <button class="btn btn-outline-success btn-block mt-5" [disabled]="!f.valid"><i class="bi bi-arrow-clockwise mx-1"></i>Actualizar</button>
+                        <button class="btn btn-outline-primary btn-block" [routerLink]="['/lista']" routerLinkActive="router-link-active" ><i class="bi bi-arrow-left-square mx-1"></i>Volver</button>
+                    </form>
+        
+                </div>
+            </div>
+        </div>    
+    </div>
+</div>

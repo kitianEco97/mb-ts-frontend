@@ -1,0 +1,52 @@
+<app-header></app-header>
+<div class="container mt-5">
+  
+      <div class="container d-flex justify-content-center">
+          <div class="card">
+              <div class="card-header">
+                <ul class="nav nav-tabs">
+                  <li class="nav-item">
+                      <a class="nav-link" [routerLink]="['/login']" routerLinkActive="router-link-active" >Iniciar sesión</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link active" [routerLink]="['/registro']" routerLinkActive="router-link-active" >Registro</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" [routerLink]="['/sendemail']" routerLinkActive="router-link-active" >Cambiar contraseña</a>
+                </li>
+                </ul>
+              </div>
+  
+              <div class="card-body">
+  
+                <form #f="ngForm" (ngSubmit)="onRegister()" novalidate>
+                  <div class="form-group">
+                      <label for="nombre">Nombre</label>
+                      <input type="text" name="nombre" id="nombre" class="form-control"
+                      [(ngModel)]="nombre" required>
+                  </div>
+                  <div class="form-group">
+                      <label for="nombreUsuario">Nombre de Usuario</label>
+                      <input type="text" name="nombreUsuario" id="nombreUsuario" class="form-control"
+                      [(ngModel)]="nombreUsuario" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="email">Correo electronico</label>
+                    <input type="text" name="email" id="email" class="form-control"
+                    [(ngModel)]="email" required>
+                  </div>
+                  <div class="form-group">
+                      <label for="password">Contraseña</label>
+                      <input type="password" name="password" id="password" class="form-control"
+                      [(ngModel)]="password" required>
+                  </div>
+                  <div class="form-group text-center">
+                    <button class="btn btn-outline-success btn-blok" [disabled]="!f.valid"><i class="bi bi-box-arrow-in-right"></i> Crear usuario</button>
+                </div>
+                </form>
+                
+              </div>
+  
+          </div>
+      </div>
+</div>

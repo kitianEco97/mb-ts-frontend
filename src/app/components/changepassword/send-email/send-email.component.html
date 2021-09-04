@@ -1,0 +1,32 @@
+<app-header></app-header>
+<div class="container mt-5">       
+    <div class="container d-flex justify-content-center">
+        <div class="card">
+            <div class="card-header">
+                <ul class="nav nav-tabs">
+                    <li class="nav-item">
+                        <a class="nav-link" [routerLink]="['/login']" routerLinkActive="router-link-active" >Iniciar sesión</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" [routerLink]="['/registro']" routerLinkActive="router-link-active" >Registro</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" [routerLink]="['/sendemail']" routerLinkActive="router-link-active" >Cambiar contraseña</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="card-body">
+                <form #f="ngForm" (ngSubmit)="onSendEmail()" novalidate>
+                    <div class="form-group text-center">
+                        <label class="text-info" for="mailTo">Te enviaremos un correo para recuperar la contraseña: </label>
+                        <input type="text" placeholder="Nombre de Usuario o Email" name="mailTo" id="mailTo" class="form-control"
+                        [(ngModel)]="mailTo" required>
+                    </div>                    
+                    <div class="form-group text-center">
+                        <button class="btn btn-outline-success btn-blok" [disabled]="!f.valid" type="submit"><i class="bi bi-box-arrow-in-right"></i> Enviar Correo</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

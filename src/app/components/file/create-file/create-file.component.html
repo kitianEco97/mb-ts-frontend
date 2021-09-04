@@ -1,0 +1,83 @@
+<app-header></app-header>
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-12 mx-auto mb-5">
+            <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+                <h2>Headers</h2>
+                <hr>
+                <div class="row">
+                    <div class="form-group col-md-4 col-xs-12">
+                        <label for="proyecto">Proyecto:</label>
+                        <input type="text" class="form-control" id="proyecto" name="proyecto" [(ngModel)]="proyecto" required>
+                    </div>
+                    <div class="form-group col-md-4 col-xs-12">
+                        <label for="cliente">Cliente:</label>
+                        <input type="text" class="form-control" id="cliente" name="cliente" [(ngModel)]="cliente" required>
+                    </div>
+                    <div class="form-group col-md-4 col-xs-12">
+                        <label for="tipohormigon">Tipo de hormigón:</label>
+                        <input type="text" class="form-control" id="tipohormigon" name="tipohormigon" [(ngModel)]="tipohormigon" required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-md-4 col-xs-12">
+                        <label for="numeromuestra">N° de muestra:</label>
+                        <input type="number" class="form-control" id="numeromuestra" name="numeromuestra" [(ngModel)]="numeromuestra" required>
+                    </div>
+                    <div class="form-group col-md-4 col-xs-12">
+                        <label for="volumen">Volumen:</label>
+                        <input type="number" class="form-control" id="volumen" name="volumen" [(ngModel)]="volumen" required>
+                    </div>
+                    <div class="form-group col-md-4 col-xs-12">
+                        <label for="nhp">N° HP:</label>
+                        <input type="number" class="form-control" id="nhp" name="nhp" [(ngModel)]="nhp" required>
+                    </div>
+                </div>
+                <hr>
+                <h2>Diseño</h2>
+                <hr>
+                <div class="row">
+                    <div class="form-group col-md-4 col-xs-12">
+                        <label for="marca">Marca:</label>
+                        <input type="text" class="form-control" id="marca" name="marca" [(ngModel)]="marca" required>
+                    </div>
+                    <div class="form-group col-md-4 col-xs-12">
+                        <label for="abs">Abs:</label>
+                        <input type="number" class="form-control" id="abs" name="abs" [(ngModel)]="abs" required>
+                    </div>
+                    <div class="form-group col-md-4 col-xs-12">
+                        <label for="lote">Lote:</label>
+                        <input type="number" class="form-control" id="lote" name="lote" [(ngModel)]="lote" required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-md-4 col-xs-12">
+                        <label for="pesoseco">Pesoseco:</label>
+                        <input type="number" class="form-control" id="pesoseco" name="pesoseco" [(ngModel)]="pesoseco" required>
+                    </div>
+                    <div class="form-group col-md-4 col-xs-12">
+                        <label for="pesosecobatch">Pesosecobatch:</label>
+                        <input type="number" class="form-control" id="pesosecobatch" name="pesosecobatch" [(ngModel)]="pesosecobatch" required>
+                    </div>
+                    <div class="form-group col-md-4 col-xs-12">
+                        <label for="humedad">Humedad:</label>
+                        <input type="number" class="form-control" id="humedad" name="humedad" [(ngModel)]="humedad" required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-md-4 col-xs-12">
+                        <label for="agua">Agua:</label>
+                        <input type="number" class="form-control" id="agua" name="agua" [(ngModel)]="agua" required>
+                    </div>
+                    <div class="form-group col-md-4 col-xs-12">
+                        <label for="pesohumedo">Pesohumedo:</label>
+                        <input type="number" class="form-control" id="pesohumedo" name="pesohumedo" [(ngModel)]="pesohumedo" required>
+                    </div>
+                    
+                </div>
+                <button class="btn btn-outline-success btn-block mt-5" [disabled]="!f.valid"><i class="bi bi-plus-circle mx-1"></i> Crear</button><br>
+                <button class="btn btn-outline-primary btn-block" [routerLink]="['/lista']" routerLinkActive="router-link-active" ><i class="bi bi-arrow-left-square mx-1"></i> Volver</button>
+            </form>
+        </div>
+    </div>
+</div>

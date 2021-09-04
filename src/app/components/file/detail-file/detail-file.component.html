@@ -1,0 +1,181 @@
+<app-header></app-header>
+<div class="container mt-5">
+
+    <div *ngIf="loading" class="mx-auto text-center">
+        <img src="../../../../assets/gif/load.gif" alt="gif de carga" width="200">
+    </div>
+      
+    <div class="container" *ngIf="file">
+        <h2>Headers</h2>
+
+        <table class="table table-dark">
+            <thead>
+              <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Proyecto</th>
+                <th scope="col">Cliente</th>
+                <th scope="col">Tipo de hormigon</th>
+                <th scope="col">Numero de ficha</th>
+                <th scope="col">Volumen</th>
+                <th scope="col">NHp</th>
+                <th scope="col"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row" class="text-success">{{file.id}}</th>
+                <td class="text-success">{{file.proyecto}}</td>
+                <td class="text-success">{{file.cliente}}</td>
+                <td class="text-success">{{file.tipohormigon}}</td>
+                <td class="text-success">{{file.numeromuestra}}</td>
+                <td class="text-success">{{file.volumen}}</td>
+                <td class="text-success">{{file.nhp}}</td>
+                <td></td>
+                <td></td>
+              </tr>        
+            </tbody>
+            <hr><br>
+            <h2 class="text-white">Diseño</h2>
+            <hr>
+            <thead>
+                <tr>
+                  <th></th>
+                  <th scope="col">Marca</th>
+                  <th scope="col">Abs</th>
+                  <th scope="col">Lote</th>
+                  <th scope="col">Pesoseco</th>
+                  <th scope="col">PesosecoBatch</th>
+                  <th scope="col">Humedad</th>
+                  <th scope="col">Agua</th>
+                  <th scope="col">PesoHumedo</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>Cemento</th>
+                  <th class="text-success" scope="row">{{file.marca}}</th>
+                  <td class="text-success">{{file.abs}}</td>
+                  <td class="text-success">{{file.lote}}</td>
+                  <td class="text-success">{{file.pesoseco}}</td>
+                  <td class="text-success">{{file.pesosecobatch}}</td>
+                  <td class="text-success">{{file.humedad}}</td>
+                  <td class="text-success">{{file.agua}}</td>
+                  <td class="text-success">{{file.pesohumedo}}</td>
+                </tr>  
+                <tr>
+                  <th>Adición</th>
+                  <th class="text-success" scope="row">{{file.marca}}</th>
+                  <td class="text-success">{{file.abs}}</td>
+                  <td class="text-success">{{file.lote}}</td>
+                  <td class="text-success">{{file.pesoseco}}</td>
+                  <td class="text-success">{{file.pesosecobatch}}</td>
+                  <td class="text-success">{{file.humedad}}</td>
+                  <td class="text-success">{{file.agua}}</td>
+                  <td class="text-success">{{file.pesohumedo}}</td>
+                </tr>   
+                <tr>
+                  <th>Grava 40mm</th>
+                  <th class="text-success" scope="row">{{file.marca}}</th>
+                  <td class="text-success">{{file.abs}}</td>
+                  <td class="text-success">{{file.lote}}</td>
+                  <td class="text-success">{{file.pesoseco}}</td>
+                  <td class="text-success">{{file.pesosecobatch}}</td>
+                  <td class="text-success">{{file.humedad}}</td>
+                  <td class="text-success">{{file.agua}}</td>
+                  <td class="text-success">{{file.pesohumedo}}</td>
+                </tr>        
+                <tr>
+                  <th>Grava 20mm</th>
+                  <th class="text-success" scope="row">{{file.marca}}</th>
+                  <td class="text-success">{{file.abs}}</td>
+                  <td class="text-success">{{file.lote}}</td>
+                  <td class="text-success">{{file.pesoseco}}</td>
+                  <td class="text-success">{{file.pesosecobatch}}</td>
+                  <td class="text-success">{{file.humedad}}</td>
+                  <td class="text-success">{{file.agua}}</td>
+                  <td class="text-success">{{file.pesohumedo}}</td>
+                </tr>   
+                <tr>
+                  <th>Arena gruesa</th>
+                  <th class="text-success" scope="row">{{file.marca}}</th>
+                  <td class="text-success">{{file.abs}}</td>
+                  <td class="text-success">{{file.lote}}</td>
+                  <td class="text-success">{{file.pesoseco}}</td>
+                  <td class="text-success">{{file.pesosecobatch}}</td>
+                  <td class="text-success">{{file.humedad}}</td>
+                  <td class="text-success">{{file.agua}}</td>
+                  <td class="text-success">{{file.pesohumedo}}</td>
+                </tr>  
+                <tr>
+                  <th>Arena fina</th>
+                  <th class="text-success" scope="row">{{file.marca}}</th>
+                  <td class="text-success">{{file.abs}}</td>
+                  <td class="text-success">{{file.lote}}</td>
+                  <td class="text-success">{{file.pesoseco}}</td>
+                  <td class="text-success">{{file.pesosecobatch}}</td>
+                  <td class="text-success">{{file.humedad}}</td>
+                  <td class="text-success">{{file.agua}}</td>
+                  <td class="text-success">{{file.pesohumedo}}</td>
+                </tr>    
+                <tr>
+                  <th>Agua total</th>
+                  <th class="text-success" scope="row">{{file.marca}}</th>
+                  <td class="text-success">{{file.abs}}</td>
+                  <td class="text-success">{{file.lote}}</td>
+                  <td class="text-success">{{file.pesoseco}}</td>
+                  <td class="text-success">{{file.pesosecobatch}}</td>
+                  <td class="text-success">{{file.humedad}}</td>
+                  <td class="text-success">{{file.agua}}</td>
+                  <td class="text-success">{{file.pesohumedo}}</td>
+                </tr>   
+                <tr>
+                  <th>Aditivo 1</th>
+                  <th class="text-success" scope="row">{{file.marca}}</th>
+                  <td class="text-success">{{file.abs}}</td>
+                  <td class="text-success">{{file.lote}}</td>
+                  <td class="text-success">{{file.pesoseco}}</td>
+                  <td class="text-success">{{file.pesosecobatch}}</td>
+                  <td class="text-success">{{file.humedad}}</td>
+                  <td class="text-success">{{file.agua}}</td>
+                  <td class="text-success">{{file.pesohumedo}}</td>
+                </tr>   
+                <tr>
+                  <th>Aditivo 2</th>
+                  <th class="text-success" scope="row">{{file.marca}}</th>
+                  <td class="text-success">{{file.abs}}</td>
+                  <td class="text-success">{{file.lote}}</td>
+                  <td class="text-success">{{file.pesoseco}}</td>
+                  <td class="text-success">{{file.pesosecobatch}}</td>
+                  <td class="text-success">{{file.humedad}}</td>
+                  <td class="text-success">{{file.agua}}</td>
+                  <td class="text-success">{{file.pesohumedo}}</td>
+                </tr>   
+                <tr>
+                  <th>Aditivo 3</th>
+                  <th class="text-success" scope="row">{{file.marca}}</th>
+                  <td class="text-success">{{file.abs}}</td>
+                  <td class="text-success">{{file.lote}}</td>
+                  <td class="text-success">{{file.pesoseco}}</td>
+                  <td class="text-success">{{file.pesosecobatch}}</td>
+                  <td class="text-success">{{file.humedad}}</td>
+                  <td class="text-success">{{file.agua}}</td>
+                  <td class="text-success">{{file.pesohumedo}}</td>
+                </tr>   
+                <tr>
+                  <th>Aditivo 4</th>
+                  <th class="text-success" scope="row">{{file.marca}}</th>
+                  <td class="text-success">{{file.abs}}</td>
+                  <td class="text-success">{{file.lote}}</td>
+                  <td class="text-success">{{file.pesoseco}}</td>
+                  <td class="text-success">{{file.pesosecobatch}}</td>
+                  <td class="text-success">{{file.humedad}}</td>
+                  <td class="text-success">{{file.agua}}</td>
+                  <td class="text-success">{{file.pesohumedo}}</td>
+                </tr>   
+              </tbody>
+          </table>        
+    </div>
+    <button class="btn btn-primary" (click)="generatePDF()">Generar PDF</button>
+    <button class="btn btn-outline-primary btn-block mb-5 mt-5" [routerLink]="['/lista']" routerLinkActive="router-link-active" ><i class="bi bi-arrow-left-square mx-1"></i>Volver</button>
+
+</div>

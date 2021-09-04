@@ -3,7 +3,10 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  URL_API: 'http://localhost:8080/file/',
+  URL_AUTH: 'http://localhost:8080/auth/',
+  URL_CHANGEPASSWORD: 'http://localhost:8080/email-password/'
 };
 
 /*
